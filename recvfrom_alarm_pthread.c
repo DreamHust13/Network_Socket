@@ -36,6 +36,7 @@ void main()
 	alarmact.sa_handler = dealSigAlarm;
 //	alarmact.sa_flags = SA_RESTART;
 	alarmact.sa_flags = SA_NOMASK;
+//无论使用哪种设置，都会阻塞在recvfrom函数上
 
 	sigaction(SIGALRM,&alarmact,NULL);
 
